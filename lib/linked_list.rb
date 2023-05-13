@@ -1,8 +1,7 @@
 class LinkedList 
   attr_reader :head
-  attr_accessor :head
   def initialize
-    @head = head
+    @head = nil
   end
 
   def append(data)
@@ -10,7 +9,8 @@ class LinkedList
       @head = Node.new(data)
     else
       current_node = @head
-      until current_node.next == nil 
+      while current_node.next != nil 
+        current_node = current_node.next
       end
       current_node.next = Node.new(data)
     end
@@ -31,6 +31,16 @@ class LinkedList
   end
 
   def to_string
-
+    if @head == nil
+      string = "List is empty"
+    else
+      current_node = @head
+      string = "#{current_node.data}"
+      while current_node.next != nil
+        current_node = current_node.next
+        string = "#{string} #{current_node.data}"
+      end
+      string
+    end
   end
 end

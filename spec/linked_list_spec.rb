@@ -39,4 +39,5 @@ RSpec.describe do
     @list.append('doop')
     @list.append('deep')
     expect(@list.to_string).to eq("doop deep")
+  end
 end
