@@ -35,4 +35,8 @@ RSpec.describe do
     expect(@list.count).to eq(2)
   end
 
+  it 'can print all list data' do
+    @list.append('doop')
+    @list.append('deep')
+    expect(@list.to_string).to eq("doop deep")
 end
