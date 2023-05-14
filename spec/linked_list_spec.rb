@@ -47,4 +47,15 @@ RSpec.describe do
     expect(@list.to_string).to eq("doop deep")
   end
   # to_string will return the entire list as a string.
+
+  it 'can prepend a node' do
+    @list.append('plop')
+    @list.append('suu')
+    @list.prepend('dop')
+    expect(@list.head.data).to eq("dop")
+    expect(@list.count).to eq(3)
+    expect(@list.to_string).to eq("dop plop suu")
+  end
+  # prepend will add a node at the beginning of the list.
 end
+

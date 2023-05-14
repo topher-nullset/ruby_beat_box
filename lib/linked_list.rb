@@ -48,4 +48,9 @@ class LinkedList
     end
   end
   # Returns the entire LinkedList as a string.
+
+  def prepend(data)
+    @head = Node.new(data, @head)
+  end
+  # Sets a new head and sets old head as next node.
 end
