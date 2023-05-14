@@ -93,3 +93,4 @@ class LinkedList
     false
   end
   # Includes? startes at the head of the list and searchs for a data match.
+end
