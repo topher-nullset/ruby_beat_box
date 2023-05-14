@@ -90,7 +90,10 @@ RSpec.describe do
     expect(@list.includes?('dop')).to eq(true)
     expect(@list.includes?('soo')).to eq(false)
   end
-  # Includes? will search the list for a tring that matches the given data.  1
+  # Includes? will search the list for a tring that matches the given data.
+
+  it 'can pop out the tail node'
 end
+
 
 

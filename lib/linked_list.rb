@@ -1,8 +1,9 @@
 class LinkedList 
 
-  attr_reader :head
+  attr_reader :head, :tail
   def initialize
     @head = nil
+    @tail = nil
   end
   # Initializes a new, epmty LinkedList.
 
@@ -92,5 +93,6 @@ class LinkedList
     end
     false
   end
-  # Includes? startes at the head of the list and searchs for a data match.
+  # Includes? starts at the head of the list and searches for a data match.
+  # Returns true is the sting match is found, false otherwise.
 end
