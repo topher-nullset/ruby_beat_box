@@ -1,21 +1,25 @@
 class LinkedList 
 
-  attr_reader :head, :tail
+  attr_reader :head
   def initialize
     @head = nil
-    @tail = nil
   end
   # Initializes a new, epmty LinkedList.
+
+  def tail
+    current_node = @head
+    while current_node != nil && current_node.next!= nil
+      current_node = current_node.next
+    end
+    current_node
+  end
 
   def append(data)
     if @head == nil
       @head = Node.new(data)
     else
-      current_node = @head
-      while current_node.next != nil 
-        current_node = current_node.next
-      end
-      current_node.next = Node.new(data)
+      tail_node = tail
+      tail_node.next = Node.new(data)
     end
   end
   # Appends a new node at the end of the list or head if empty.
@@ -95,4 +99,23 @@ class LinkedList
   end
   # Includes? starts at the head of the list and searches for a data match.
   # Returns true is the sting match is found, false otherwise.
+  
+  def pop
+    return nil if @head == nil
+
+    if @head.next == nil
+      bubble_node = @head
+      @head = nil
+      return bubble_node.data
+    end
+
+    current_node = @head
+    while current_node.next!= nil && current_node.next.next!= nil
+      current_node = current_node.next
+    end
+    bubble_node = current_node.next
+    current_node.next = nil
+    return bubble_node.data
+  end
+  # Removes and returns the tail node of the list, even if it is the head.
 end

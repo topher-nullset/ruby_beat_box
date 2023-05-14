@@ -92,8 +92,15 @@ RSpec.describe do
   end
   # Includes? will search the list for a tring that matches the given data.
 
-  it 'can pop out the tail node'
+  it 'can pop out the tail node' do
+    @list.append('plop')
+    @list.append('suu')
+    @list.prepend('dop')
+    @list.insert(1, 'woo')
+    expect(@list.pop).to eq('suu')
+    expect(@list.tail.data).to eq('plop')
+    expect(@list.pop).to eq('plop')
+    expect(@list.to_string).to eq('dop woo')
+  end
+  # pop will remove and return the tail node.
 end
-
-
-
