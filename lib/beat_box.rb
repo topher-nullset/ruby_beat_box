@@ -14,4 +14,14 @@ class BeatBox
   end
   # Splits new beats into nodes and appends them to the list.
 
+  def count
+    count = 0
+    current_node = @list.head
+    until current_node.nil?
+      count += 1
+      current_node = current_node.next
+    end
+    count
+  end
+
 end

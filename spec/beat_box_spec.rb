@@ -22,4 +22,12 @@ RSpec.describe BeatBox do
     expect(@bb.list.tail.data).to eq('shu')
   end
   # appends new beats as new nodes in list.
+
+  it 'can count beats in linked list' do
+    @bb.append('deep doo ditt')
+    @bb.append('woo hoo shu')
+    expect(@bb.count).to eq(6)
+    expect(@bb.list.count).to eq(6)
+  end
+
 end
