@@ -23,5 +23,11 @@ class BeatBox
     end
     count
   end
+  # Returns the number of beats int the associated list.
 
+  def play(voice = "Boing", rate = 500)
+    beats = @list.to_string
+    `say -r #{rate} -v #{voice} '#{beats}'`
+  end
+ # Play will run the beatbox with the given voice and rate.
 end

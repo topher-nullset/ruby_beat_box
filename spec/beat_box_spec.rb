@@ -29,5 +29,12 @@ RSpec.describe BeatBox do
     expect(@bb.count).to eq(6)
     expect(@bb.list.count).to eq(6)
   end
+  # Count is a method for both BeatBox and LinkedList.
 
+  it 'can play the sounds in terminal' do
+    @bb.append('deep doo ditt')
+    @bb.append('woo hoo shu')
+    expect(@bb.play).to eq(`say -r 500 Boing 'deep doo ditt woo hoo shu'`)
+  end
+  # Play will say the sounds in terminal with default voice and speed.
 end
