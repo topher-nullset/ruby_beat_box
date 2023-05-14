@@ -17,7 +17,7 @@ RSpec.describe do
   # Node data is a string and can be read.
 
   it 'has no next node' do
-    expect(@node.next_node).to be_nil
+    expect(@node.next).to eq(nil)
   end
   # New nodes have no next node by default.
 end
