@@ -4,7 +4,7 @@ class LinkedList
   def initialize
     @head = nil
   end
-  # Initializes a new LinkedList with an empty head.
+  # Initializes a new, epmty LinkedList.
 
   def append(data)
     if @head == nil

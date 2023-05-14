@@ -5,5 +5,6 @@ class Node
     @data = data
     @next = next_node
   end
-
+  # Initializes a new node, given data.
+  # Next node is set to nil automatically.
 end
