@@ -81,6 +81,16 @@ RSpec.describe do
   end
   # find will return the data of the node at the given index.
   # if given a second variable, the following nodes will be returned.
+
+  it 'can find a node given a string' do
+    @list.append('plop')
+    @list.append('suu')
+    @list.prepend('dop')
+    @list.insert(1, 'woo')
+    expect(@list.includes?('dop')).to eq(true)
+    expect(@list.includes?('soo')).to eq(false)
+  end
+  # Includes? will search the list for a tring that matches the given data.  1
 end
 
 

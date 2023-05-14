@@ -81,6 +81,15 @@ class LinkedList
     string
   end
   # Finds and returns the node at the given position in the list.
-  # Returns 1 item as standard but can return the folloing items in the list
-  # with the second argument.
-end
+  # Returns 1 item as standard but can return the folloing items 
+  # in the list with the second argument.
+
+  def includes?(data)
+    current_node = @head
+    while current_node != nil
+      return true if current_node.data == data
+      current_node = current_node.next
+    end
+    false
+  end
+  # Includes? startes at the head of the list and searchs for a data match.
