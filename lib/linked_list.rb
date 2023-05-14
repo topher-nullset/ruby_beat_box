@@ -53,4 +53,17 @@ class LinkedList
     @head = Node.new(data, @head)
   end
   # Sets a new head and sets old head as next node.
+
+  def insert(position, data)
+    index = position - 1
+    current_node = @head
+    previous_node = @head
+    index.times do
+      preveious_node = current_node.next
+    end
+    node = Node.new(data, current_node.next)
+    current_node.next = node
+  end
+  # Inserts a new node at the given position in the list.
+
 end

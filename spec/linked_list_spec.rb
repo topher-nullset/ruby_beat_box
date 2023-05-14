@@ -57,5 +57,15 @@ RSpec.describe do
     expect(@list.to_string).to eq("dop plop suu")
   end
   # prepend will add a node at the beginning of the list.
+
+  it 'can insert a node at some index' do
+    @list.append('plop')
+    @list.append('suu')
+    @list.prepend('dop')
+    @list.insert(1, 'woo')
+    expect(@list.count).to eq(4)
+    expect(@list.to_string).to eq("dop woo plop suu")
+  end
+  # insert will insert a new node with given data at the given index.
 end
 
