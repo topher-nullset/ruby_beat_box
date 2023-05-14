@@ -67,5 +67,20 @@ RSpec.describe do
     expect(@list.to_string).to eq("dop woo plop suu")
   end
   # insert will insert a new node with given data at the given index.
+
+  it 'can find a node by position' do
+    @list.append('plop')
+    @list.append('suu')
+    @list.prepend('dop')
+    @list.insert(1, 'woo')
+    @list.prepend('woo')
+    @list.prepend('suu')
+    expect(@list.to_string).to eq("suu woo dop woo plop suu")
+    expect(@list.find(3)).to eq('dop')
+    expect(@list.find(4, 3)).to eq('woo plop suu')
+  end
+  # find will return the data of the node at the given index.
+  # if given a second variable, the following nodes will be returned.
 end
+
 

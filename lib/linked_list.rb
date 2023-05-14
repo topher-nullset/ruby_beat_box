@@ -59,11 +59,28 @@ class LinkedList
     current_node = @head
     previous_node = @head
     index.times do
-      preveious_node = current_node.next
+      previous_node = current_node.next
     end
     node = Node.new(data, current_node.next)
     current_node.next = node
   end
   # Inserts a new node at the given position in the list.
 
+  def find(position, length = 1)
+    index = position - 1
+    current_node = @head
+    index.times do
+      current_node = current_node.next
+    end
+    len = length - 1
+    string = "#{current_node.data}"
+    len.times do
+      current_node = current_node.next
+      string = "#{string} #{current_node.data}"
+    end
+    string
+  end
+  # Finds and returns the node at the given position in the list.
+  # Returns 1 item as standard but can return the folloing items in the list
+  # with the second argument.
 end
