@@ -1,8 +1,10 @@
 class LinkedList 
+
   attr_reader :head
   def initialize
     @head = nil
   end
+  # Initializes a new LinkedList with an empty head.
 
   def append(data)
     if @head == nil
@@ -15,6 +17,7 @@ class LinkedList
       current_node.next = Node.new(data)
     end
   end
+  # Appends a new node at the end of the list or head if empty.
 
   def count
     if @head == nil
@@ -29,6 +32,7 @@ class LinkedList
       count
     end
   end
+  # Counts the number of nodes in the LinkedList.
 
   def to_string
     if @head == nil
@@ -43,4 +47,5 @@ class LinkedList
       string
     end
   end
+  # Returns the entire LinkedList as a string.
 end
