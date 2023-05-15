@@ -78,6 +78,7 @@ RSpec.describe do
     expect(@list.to_string).to eq("suu woo dop woo plop suu")
     expect(@list.find(3)).to eq('dop')
     expect(@list.find(4, 3)).to eq('woo plop suu')
+    expect(@list.find(1, 2)).to eq('suu woo')
   end
   # find will return the data of the node at the given index.
   # if given a second variable, the following nodes will be returned.

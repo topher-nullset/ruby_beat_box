@@ -77,8 +77,8 @@ class LinkedList
     index.times do
       current_node = current_node.next
     end
-    len = length - 1
     string = "#{current_node.data}"
+    len = length - 1
     len.times do
       current_node = current_node.next
       string = "#{string} #{current_node.data}"
@@ -114,6 +114,7 @@ class LinkedList
       current_node = current_node.next
     end
     bubble_node = current_node.next
+    # this saves the last node in the bubble. 
     current_node.next = nil
     return bubble_node.data
   end
