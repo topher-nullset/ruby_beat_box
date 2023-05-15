@@ -34,7 +34,7 @@ RSpec.describe BeatBox do
   it 'can play the sounds in terminal' do
     @bb.append('deep doo ditt')
     @bb.append('woo hoo shu')
-    expect(@bb.play).to eq(`say -r 500 Boing 'deep doo ditt woo hoo shu'`)
+    expect(@bb.play).to eq("say -r 200 -v Boing 'deep doo ditt woo hoo shu'")
   end
   # Play will say the sounds in terminal with default voice and speed.
 end
