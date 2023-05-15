@@ -13,6 +13,7 @@ class LinkedList
     end
     current_node
   end
+  # tail method return the tail of the list.
 
   def append(data)
     if @head == nil
