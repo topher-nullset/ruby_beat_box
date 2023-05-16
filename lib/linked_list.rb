@@ -97,7 +97,8 @@ class LinkedList
       current_node = current_node.next
     end
     false
-  end
+  end 
+  
   # Includes? starts at the head of the list and searches for a data match.
   # Returns true is the sting match is found, false otherwise.
   
