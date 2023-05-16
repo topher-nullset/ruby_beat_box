@@ -26,17 +26,13 @@ class LinkedList
   # Appends a new node at the end of the list or head if empty.
 
   def count
-    if @head == nil
-      count = 0
-    else
-      current_node = @head
-      count = 1
-      while current_node.next != nil
-        count += 1
-        current_node = current_node.next
-      end
-      count
+    count = 0
+    current_node = @head
+    until current_node.nil?
+      count += 1
+      current_node = current_node.next
     end
+    count
   end
   # Counts the number of nodes in the LinkedList.
 
@@ -98,7 +94,7 @@ class LinkedList
     end
     false
   end 
-  
+
   # Includes? starts at the head of the list and searches for a data match.
   # Returns true is the sting match is found, false otherwise.
   
